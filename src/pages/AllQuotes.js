@@ -1,36 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
 import QuoteList from "../components/quotes/QuoteList";
+import LoadingSpinner from "../components/UI/LoadingSpinner";
+import NoQuotesFound from "../components/quotes/NoQuotesFound";
 
-const DUMMY_QUOTES = [
-  {
-    id: "q1",
-    text: "I'm not a great programmer; I'm just a good programmer with great habits.",
-    author: "Kent Beck",
-  },
-  {
-    id: "q2",
-    text: "The best way to predict the future is to create it.",
-    author: "Peter Drucker",
-  },
-  {
-    id: "q3",
-    text: "The best way to learn is to teach.",
-    author: "Richard Feynman",
-  },
-  {
-    id: "q4",
-    text: "The best way to fail is to not try.",
-    author: "Elbert Hubbard",
-  },
-  {
-    id: "q5",
-    text: "The best way to learn is to ask questions.",
-    author: "C.S. Lewis",
-  },
-];
+import useHttp from "../hooks/use-http";
+import { getAllQuotes } from "../lib/api";
 
 function AllQuotes() {
-  return <QuoteList quotes={DUMMY_QUOTES} />;
+  const {
+    sendRequest,
+    status,
+    data: loadedQuotes,
+    error,
+  } = useHttp(getAllQuotes, true);
+
+  useEffect(() => {
+    sendRequest();
+  }, [sendRequest]);
+
+  if (status === "pending") {
+    return (
+      <div className="centered">
+        <LoadingSpinner />
+      </div>
+    );
+  }
+  if (error) {
+    return <p className="centered">{error}</p>;
+  }
+  if (status === "completed" && (!loadedQuotes || loadedQuotes.length === 0)) {
+    return <NoQuotesFound />;
+  }
+  if (status === "completed") {
+    return <QuoteList quotes={loadedQuotes} />;
+  }
 }
 
 export default AllQuotes;

@@ -1,51 +1,46 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Route, useParams, Link, useRouteMatch } from "react-router-dom";
 
 import Comments from "../components/comments/Comments";
 import HighlightedQuote from "../components/quotes/HighlightedQuote";
+import LoadingSpinner from "../components/UI/LoadingSpinner";
 
-const DUMMY_QUOTES = [
-  {
-    id: "q1",
-    text: "I'm not a great programmer; I'm just a good programmer with great habits.",
-    author: "Kent Beck",
-  },
-  {
-    id: "q2",
-    text: "The best way to predict the future is to create it.",
-    author: "Peter Drucker",
-  },
-  {
-    id: "q3",
-    text: "The best way to learn is to teach.",
-    author: "Richard Feynman",
-  },
-  {
-    id: "q4",
-    text: "The best way to fail is to not try.",
-    author: "Elbert Hubbard",
-  },
-  {
-    id: "q5",
-    text: "The best way to learn is to ask questions.",
-    author: "C.S. Lewis",
-  },
-];
+import useHttp from "../hooks/use-http";
+import { getSingleQuote } from "../lib/api";
 
 function QuoteDetail() {
   const { quoteId } = useParams();
-  const match = useRouteMatch()
+  const match = useRouteMatch();
 
+  const {
+    sendRequest,
+    status,
+    data: loadedQuote,
+    error,
+  } = useHttp(getSingleQuote, true);
 
-  const quote = DUMMY_QUOTES.find((q) => q.id === quoteId);
+  useEffect(() => {
+    sendRequest(quoteId);
+  }, [sendRequest, quoteId]);
 
-  if (!quote) {
+  if (status === "pending") {
+    return (
+      <div className="centered">
+        <LoadingSpinner />
+      </div>
+    );
+  }
+  if (error) {
+    return <p className="centered">{error}</p>;
+  }
+
+  if (!loadedQuote.text) {
     return <h2>No quote found.</h2>;
   }
 
   return (
     <section>
-      <HighlightedQuote text={quote.text} author={quote.author} />
+      <HighlightedQuote text={loadedQuote.text} author={loadedQuote.author} />
 
       <Route path={match.path} exact>
         <div className="centered">
