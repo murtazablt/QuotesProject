@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/QuotesProject/static/css/main.b6221c2d.chunk.css",
-    "main.js": "/QuotesProject/static/js/main.16b27e40.chunk.js",
-    "main.js.map": "/QuotesProject/static/js/main.16b27e40.chunk.js.map",
+    "main.js": "/QuotesProject/static/js/main.70ce4180.chunk.js",
+    "main.js.map": "/QuotesProject/static/js/main.70ce4180.chunk.js.map",
     "runtime-main.js": "/QuotesProject/static/js/runtime-main.a04c19f2.js",
     "runtime-main.js.map": "/QuotesProject/static/js/runtime-main.a04c19f2.js.map",
     "static/js/2.e8f4872c.chunk.js": "/QuotesProject/static/js/2.e8f4872c.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.a04c19f2.js",
     "static/js/2.e8f4872c.chunk.js",
     "static/css/main.b6221c2d.chunk.css",
-    "static/js/main.16b27e40.chunk.js"
+    "static/js/main.70ce4180.chunk.js"
   ]
 }
