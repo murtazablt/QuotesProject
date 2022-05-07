@@ -1,5 +1,5 @@
-import { useRef, useState } from "react";
-import { Prompt } from "react-router-dom";
+import { useRef } from "react";
+// import { Prompt } from "react-router-dom";
 import { Fragment } from "react/cjs/react.production.min";
 
 import Card from "../UI/Card";
@@ -10,7 +10,7 @@ const QuoteForm = (props) => {
   const authorInputRef = useRef();
   const textInputRef = useRef();
 
-  const [isFocused, setIsFocused] = useState(false);
+  // const [isFocused, setIsFocused] = useState(false);
 
   function submitFormHandler(event) {
     event.preventDefault();
@@ -20,29 +20,30 @@ const QuoteForm = (props) => {
 
     // optional: Could validate here
 
-    setIsFocused(false);
+    // setIsFocused(false);
     props.onAddQuote({ author: enteredAuthor, text: enteredText });
   }
 
-  const formFocusedHandler = () => {
-    setIsFocused(true);
-  };
+  // const formFocusedHandler = () => {
+  //   setIsFocused(true);
+  // };
 
-  const finishFocusHandler = () => {
-    setIsFocused(false);
-  };
+  // const finishFocusHandler = () => {
+  //   setIsFocused(false);
+  // };
 
   return (
     <Fragment>
-      <Prompt
+      {/* Prompt is currently not supported yet by v6 */}
+      {/* <Prompt
         when={isFocused}
         message={(location) =>
           "Are you sure you want to leave? All your entered data will be lost!"
         }
-      />
+      /> */}
       <Card>
         <form
-          onFocus={formFocusedHandler}
+          // onFocus={formFocusedHandler}
           className={classes.form}
           onSubmit={submitFormHandler}
         >
@@ -61,7 +62,9 @@ const QuoteForm = (props) => {
             <textarea id="text" rows="5" ref={textInputRef}></textarea>
           </div>
           <div className={classes.actions}>
-            <button onClick={finishFocusHandler} className="btn">
+            <button 
+            // onClick={finishFocusHandler} 
+            className="btn">
               Add Quote
             </button>
           </div>
