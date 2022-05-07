@@ -10,7 +10,12 @@
 
 .logo {
   font-size: 2rem;
-  color: white;
+  color: #fff;
+}
+
+.logo a{
+  text-decoration: none;
+  color: inherit
 }
 
 .nav ul {
