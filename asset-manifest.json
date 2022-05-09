@@ -1,20 +1,34 @@
 {
   "files": {
-    "main.css": "/QuotesProject/static/css/main.b6221c2d.chunk.css",
-    "main.js": "/QuotesProject/static/js/main.82a34205.chunk.js",
-    "main.js.map": "/QuotesProject/static/js/main.82a34205.chunk.js.map",
-    "runtime-main.js": "/QuotesProject/static/js/runtime-main.a04c19f2.js",
-    "runtime-main.js.map": "/QuotesProject/static/js/runtime-main.a04c19f2.js.map",
-    "static/js/2.e8f4872c.chunk.js": "/QuotesProject/static/js/2.e8f4872c.chunk.js",
-    "static/js/2.e8f4872c.chunk.js.map": "/QuotesProject/static/js/2.e8f4872c.chunk.js.map",
+    "main.css": "/QuotesProject/static/css/main.4763e04d.chunk.css",
+    "main.js": "/QuotesProject/static/js/main.19ed902f.chunk.js",
+    "main.js.map": "/QuotesProject/static/js/main.19ed902f.chunk.js.map",
+    "runtime-main.js": "/QuotesProject/static/js/runtime-main.a0f17860.js",
+    "runtime-main.js.map": "/QuotesProject/static/js/runtime-main.a0f17860.js.map",
+    "static/js/2.5be1aa22.chunk.js": "/QuotesProject/static/js/2.5be1aa22.chunk.js",
+    "static/js/2.5be1aa22.chunk.js.map": "/QuotesProject/static/js/2.5be1aa22.chunk.js.map",
+    "static/css/3.973b4b5b.chunk.css": "/QuotesProject/static/css/3.973b4b5b.chunk.css",
+    "static/js/3.d08aee34.chunk.js": "/QuotesProject/static/js/3.d08aee34.chunk.js",
+    "static/js/3.d08aee34.chunk.js.map": "/QuotesProject/static/js/3.d08aee34.chunk.js.map",
+    "static/css/4.f7e5e9c3.chunk.css": "/QuotesProject/static/css/4.f7e5e9c3.chunk.css",
+    "static/js/4.be2032cd.chunk.js": "/QuotesProject/static/js/4.be2032cd.chunk.js",
+    "static/js/4.be2032cd.chunk.js.map": "/QuotesProject/static/js/4.be2032cd.chunk.js.map",
+    "static/css/5.9331a4d0.chunk.css": "/QuotesProject/static/css/5.9331a4d0.chunk.css",
+    "static/js/5.dd193ee5.chunk.js": "/QuotesProject/static/js/5.dd193ee5.chunk.js",
+    "static/js/5.dd193ee5.chunk.js.map": "/QuotesProject/static/js/5.dd193ee5.chunk.js.map",
+    "static/js/6.bb07ffca.chunk.js": "/QuotesProject/static/js/6.bb07ffca.chunk.js",
+    "static/js/6.bb07ffca.chunk.js.map": "/QuotesProject/static/js/6.bb07ffca.chunk.js.map",
     "index.html": "/QuotesProject/index.html",
-    "static/css/main.b6221c2d.chunk.css.map": "/QuotesProject/static/css/main.b6221c2d.chunk.css.map",
-    "static/js/2.e8f4872c.chunk.js.LICENSE.txt": "/QuotesProject/static/js/2.e8f4872c.chunk.js.LICENSE.txt"
+    "static/css/3.973b4b5b.chunk.css.map": "/QuotesProject/static/css/3.973b4b5b.chunk.css.map",
+    "static/css/4.f7e5e9c3.chunk.css.map": "/QuotesProject/static/css/4.f7e5e9c3.chunk.css.map",
+    "static/css/5.9331a4d0.chunk.css.map": "/QuotesProject/static/css/5.9331a4d0.chunk.css.map",
+    "static/css/main.4763e04d.chunk.css.map": "/QuotesProject/static/css/main.4763e04d.chunk.css.map",
+    "static/js/2.5be1aa22.chunk.js.LICENSE.txt": "/QuotesProject/static/js/2.5be1aa22.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.a04c19f2.js",
-    "static/js/2.e8f4872c.chunk.js",
-    "static/css/main.b6221c2d.chunk.css",
-    "static/js/main.82a34205.chunk.js"
+    "static/js/runtime-main.a0f17860.js",
+    "static/js/2.5be1aa22.chunk.js",
+    "static/css/main.4763e04d.chunk.css",
+    "static/js/main.19ed902f.chunk.js"
   ]
 }
